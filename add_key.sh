@@ -9,7 +9,7 @@ KEY="$CURL https://github.com/$GITHUB_USER.keys"
 
 # Append public key to keychain
 echo $KEY >> $KEYCHAIN
-if [[ $? -ne 0 ]]; then
+if [ $? -ne 0 ]; then
     echo "Could not append key to $KEYCHAIN"
     exit 1
 fi
