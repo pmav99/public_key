@@ -7,5 +7,5 @@ usage
 =====
 
 ```Bash
-wget -O - https://raw.github.com/pmoust/public_key/master/add_key.sh | sh
+wget -O - https://raw.github.com/pmav99/public_key/master/add_key.sh | sh
 ```
