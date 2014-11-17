@@ -8,6 +8,8 @@ CURL=`which curl`
 KEY="$CURL https://github.com/$GITHUB_USER.keys" 
 
 # Append public key to keychain
+mkdir -p "$HOME/.ssh"
+touch "$KEYCHAIN"
 echo $KEY >> $KEYCHAIN
 if [ $? -ne 0 ]; then
     echo "Could not append key to $KEYCHAIN"
