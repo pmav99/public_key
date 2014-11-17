@@ -8,6 +8,8 @@ HOME=$(eval echo ~${SUDO_USER})
 KEYCHAIN="$HOME/.ssh/authorized_keys"
 
 # Append public key to keychain
+mkdir -p "$HOME/.ssh"
+touch "$KEYCHAIN"
 echo $KEY >> $KEYCHAIN
 if [ $? -ne 0 ]; then
     echo "Could not append key to $KEYCHAIN"
